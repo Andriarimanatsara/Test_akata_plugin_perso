@@ -62,9 +62,9 @@ wp.blocks.registerBlockType('wpwb/weather-block', {
             null,
             wp.element.createElement('strong', null, `Météo à ${weather.location}`),
             wp.element.createElement('br'),
-            `Température : ${weather.temp_c}°C`,
+            Température `: ${weather.temp_c}°C`,
             wp.element.createElement('br'),
-            `Condition : ${weather.condition}`
+            Condition `: ${weather.condition}`
         );
     },
     save: () => null // Rendu dynamique

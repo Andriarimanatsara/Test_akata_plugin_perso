@@ -1,0 +1,38 @@
+.weather-widget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #a6c0fe, #f68084);
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  font-family: sans-serif;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.weather-condition {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.weather-temp {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.weather-details {
+  font-size: 14px;
+}
+
+.weather-icon img {
+  width: 64px;
+  height: 64px;
+}

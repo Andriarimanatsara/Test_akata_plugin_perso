@@ -26,14 +26,24 @@ function wpwb_get_weather() {
     }
 
     // Appel API externe
-    $api_key = 'VOTRE_CLE_API_WEATHERAPI'; // Remplace par ta clé réelle
+    $api_key = '3091e9432d5447a79cf125943250208'; // 🔁 Remplace ici avec ta vraie clé
     $url = "https://api.weatherapi.com/v1/current.json?key=$api_key&q=$lat,$lon&lang=fr";
     $response = wp_remote_get($url);
+
+    if (is_wp_error($response)) {
+        wp_send_json(['success' => false, 'message' => 'Erreur lors de la requête API']);
+    }
+
     $body = wp_remote_retrieve_body($response);
     $data = json_decode($body);
 
+    // Debug temporaire
     if (!isset($data->current)) {
-        wp_send_json(['success' => false, 'message' => 'Aucune donnée météo trouvée']);
+        wp_send_json([
+            'success' => false,
+            'message' => 'Aucune donnée météo trouvée',
+            'debug' => $data // 👈 Affiche ce que retourne réellement WeatherAPI
+        ]);
     }
 
     // Structure simplifiée à enregistrer

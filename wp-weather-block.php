@@ -17,6 +17,13 @@ function wpwb_enqueue_block_assets() {
         filemtime(plugin_dir_path(__FILE__) . 'block/block.js')
     );
 
+    wp_enqueue_style(
+        'wpwb-style',
+        plugins_url('block/style.css', __FILE__),
+        [],
+        filemtime(plugin_dir_path(__FILE__) . 'block/style.css')
+    );
+    
     register_block_type(__DIR__ . '/block/block.json', [
         'editor_script' => 'wpwb-block',
         'render_callback' => 'wpwb_render_block'
