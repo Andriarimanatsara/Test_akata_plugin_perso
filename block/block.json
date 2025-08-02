@@ -1,0 +1,12 @@
+{
+  "apiVersion": 2,
+  "name": "wpwb/weather-block",
+  "title": "Météo Géolocalisée",
+  "category": "widgets",
+  "icon": "cloud",
+  "description": "Affiche la météo basée sur la position de l'utilisateur.",
+  "supports": {
+    "html": false
+  },
+  "editorScript": "wpwb-block"
+}
