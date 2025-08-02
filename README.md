@@ -11,3 +11,4 @@
 #création du dossier qui contient le fichier js et le fichier json
 #création du dossier include qui contient le fonction php "weather-functions.php"
 
+#Activer le plugin quand dans wordpress(extension->WP Weather Block->Activer)
