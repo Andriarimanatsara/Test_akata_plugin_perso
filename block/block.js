@@ -1,21 +1,3 @@
-/*const { registerBlockType } = wp.blocks;
-
-registerBlockType('wpwb/weather-block', {
-    title: 'Météo Géolocalisée',
-    icon: 'cloud',
-    category: 'widgets',
-    edit: () => {
-        return wp.element.createElement(
-            'div',
-            null,
-            'Bloc météo ici (test)'
-        );
-    },
-    save: () => {
-        return null; // Rendu dynamique
-    }
-});*/
-
 const { useEffect, useState } = wp.element;
 
 wp.blocks.registerBlockType('wpwb/weather-block', {
